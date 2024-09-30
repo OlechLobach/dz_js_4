@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JS - Form</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script src="js/bootstrap.bundle.min.js" defer></script>
+    <script src="js/script.js" defer></script>
+  </head>
+
+  <body class="bg-dark">
+    <div class="container py-5 px-3 text-bg-info">
+      <h1 class="h1 text-danger text-center mb-5">ПРАЦЮЄМО З ФОРМАМИ: input, range, textarea, checkbox, radio</h1>
+
+      <section class="text-bg-secondary p-4 rounded-3 mb-5">
+        <p class="h3 text-danger"><b>Task 1.</b></p>
+        <p>
+          При натисканні кнопки b-1 запускається функція f1. Функція перевіряє стан .i-1 і якщо він checked - виводить
+          true, якщо не вибрано - false. Виведення out-1.
+        </p>
+        <form id="task-1">
+          <div class="mb-3 form-check">
+            <input class="form-check-input" type="checkbox" value="checkbox" id="i-1" />
+            <label class="form-check-label" for="i-1">Checkbox</label>
+          </div>
+          <button id="b-1" type="button" class="btn btn-success px-5 mb-3">Task-1</button>
+        </form>
+        <div id="out-1" class="p-3 text-bg-light rounded-3"></div>
+      </section>
+
+      <section class="text-bg-secondary p-4 rounded-3 mb-5">
+        <p class="h3 text-danger"><b>Task 2.</b></p>
+        <p>
+          При натисканні кнопки b-2 запускається функція f2. Функція перевіряє стан i-2 і якщо він checked – виводить
+          value даного елемента, якщо обраний - false. Виведення out-2.
+        </p>
+        <form id="task-2">
+          <div class="mb-3 form-check">
+            <input class="form-check-input" type="checkbox" value="Ти зробив все вірно" id="i-2" />
+            <label class="form-check-label" for="i-2">Checkbox</label>
+          </div>
+          <button id="b-2" type="button" class="btn btn-success px-5 mb-3">Task-2</button>
+        </form>
+        <div id="out-2" class="p-3 text-bg-light rounded-3"></div>
+      </section>
+
+      <section class="text-bg-secondary p-4 rounded-3 mb-5">
+        <p class="h3 text-danger"><b>Task 3.</b></p>
+        <p>
+          При натисканні на кнопку виводьте в out-31 value, прописане в input i-3. У out-32 виводьте 1 якщо довжина
+          пароля більше або дорівнює 6 або 0, якщо менше. Для підрахунку кількості символів у рядку використовуйте
+          length.
+        </p>
+        <form id="task-3">
+          <div class="mb-3">
+            <label for="i-3" class="form-label">Password</label>
+            <input type="password" class="form-control" id="i-3" placeholder="Введіть пароль...." />
+          </div>
+          <button id="b-3" type="button" class="btn btn-success px-5 mb-3">Task-3</button>
+        </form>
+        <div id="out-31" class="p-3 text-bg-light rounded-3 mb-1"></div>
+        <div id="out-32" class="p-3 text-bg-light rounded-3"></div>
+      </section>
+
+      <section class="text-bg-secondary p-4 rounded-3 mb-5">
+        <p class="h3 text-danger"><b>Task 4.</b></p>
+        <p>
+          При натисканні кнопки b-4 запускаємо функцію f4. Функція перевіряє checked елементів. Якщо елемент вибраний
+          (checked) виводить в out-4 value вибраної радіо кнопки.
+        </p>
+        <form id="task-4">
+          <p class="h2 text-info">Who are you?</p>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="stack" id="i-41" value="Frontend Developer" checked />
+            <label class="form-check-label" for="i-41"> Frontend Developer </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="stack" id="i-42" value="Backend Developer" />
+            <label class="form-check-label" for="i-42"> Backend Developer </label>
+          </div>
+          <div class="form-check mb-3">
+            <input class="form-check-input" type="radio" name="stack" id="i-43" value="Full-stack Developer" />
+            <label class="form-check-label" for="i-43"> Full-stack Developer </label>
+          </div>
+          <button id="b-4" type="button" class="btn btn-success px-5 mb-3">Task-4</button>
+        </form>
+        <div id="out-4" class="p-3 text-bg-light rounded-3"></div>
+      </section>
+
+      <section class="text-bg-secondary p-4 rounded-3 mb-5">
+        <p class="h3 text-danger"><b>Task 5.</b></p>
+        <p>
+          При натисканні кнопки b-5 запускається функція f5. Функція отримує колір з i-51 і надає як value елементу
+          i-52. Тобто, після натискання кнопки вибраного кольору в першому і другому input стануть однакові.
+        </p>
+        <form id="task-5">
+          <div class="form-check">
+            <label class="form-label" for="i-51"> Color picker one </label>
+            <input class="form-control form-control-color" type="color" name="colorOne" id="i-51" value="#34eb43" />
+          </div>
+          <div class="form-check mb-3">
+            <label class="form-label" for="i-52"> Color picker two </label>
+            <input class="form-control form-control-color" type="color" name="colorTwo" id="i-52" />
+          </div>
+          <button id="b-5" type="button" class="btn btn-success px-5 mb-3">Task-5</button>
+        </form>
+      </section>
+
+      <section class="text-bg-secondary p-4 rounded-3 mb-5">
+        <p class="h3 text-danger"><b>Task 6.</b></p>
+        <p>При натисканні кнопки b-6 запускається функція f6. Функція виводить дату з i-6 у out-6.</p>
+        <form id="task-6">
+          <div class="mb-3">
+            <input class="form-control w-25" type="date" id="i-6" />
+            <label class="form-label d-none" for="i-6">Виберіть дату</label>
+          </div>
+          <button id="b-6" type="button" class="btn btn-success px-5 mb-3">Task-6</button>
+        </form>
+        <div id="out-6" class="p-3 text-bg-light rounded-3"></div>
+      </section>
+
+      <section class="text-bg-secondary p-4 rounded-3 mb-5">
+        <p class="h3 text-danger"><b>Task 7.</b></p>
+        <p>При зміні положення повзунка i-7 виводьте його значення у out-7. Зверніть увагу на подію.</p>
+        <form id="task-7">
+          <div class="mb-3 d-grid">
+            <label for="i-7" class="form-label">Змініть значення повзунка</label>
+            <input type="range" class="form-range w-50" id="i-7" min="0" max="1000" value="100" />
+          </div>
+        </form>
+        <div id="out-7" class="p-3 text-bg-light rounded-3">100</div>
+      </section>
+
+      <section class="text-bg-secondary p-4 rounded-3 mb-5">
+        <p class="h3 text-danger"><b>Task 8.</b></p>
+        <p>При натисканні кнопки b-8 функція повинна виводити текст з i-8 в textarea t-8 та out-8.</p>
+        <form id="task-81">
+          <div class="mb-3">
+            <label for="i-8" class="form-label h4 text-info">Text input</label>
+            <input type="text" class="form-control" id="i-8" placeholder="Введіть текст....." />
+          </div>
+          <button id="b-8" type="button" class="btn btn-success px-5 mb-3">Task-8</button>
+        </form>
+        <p class="h4 text-info">out-8</p>
+        <div id="out-8" class="p-3 text-bg-light rounded-3 mb-3"></div>
+        <form id="task-82">
+          <div class="mb-3">
+            <label for="t-8" class="form-label h4 text-info">Text textarea</label>
+            <textarea class="form-control" id="t-8" rows="3"></textarea>
+          </div>
+        </form>
+      </section>
+
+      <section class="text-bg-secondary p-4 rounded-3 mb-5">
+        <p class="h3 text-danger"><b>Task 9.</b></p>
+        <p>При зміні вибраного значення s-9 виводьте в out-9 value вибраного option з s-9.</p>
+        <form id="task-9" class="mb-3">
+          <select class="form-select w-25" id="s-9" name="number">
+            <option selected>Open this select menu</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </form>
+        <div id="out-9" class="p-3 text-bg-light rounded-3"></div>
+      </section>
+
+      <section class="text-bg-secondary p-4 rounded-3 mb-5">
+        <p class="h3 text-danger"><b>Task 10.</b></p>
+        <p class="mb-4">
+          Заповніть форму інформації про користувача. Після заповнення форми виведіть всю введену інформацію у
+          текстовому вигляді в out-10.
+        </p>
+        <form class="row g-3 mb-3 text-bg-success rounded-3 p-4" id="task-10">
+          <h4 class="mb-3 text-info">Заповніть інформацію про користувача</h4>
+          <div class="col-md-6">
+            <label for="inputFirstName" class="form-label">First Name</label>
+            <input type="text" class="form-control" id="inputFirstName" name="firstName" />
+          </div>
+          <div class="col-md-6">
+            <label for="inputLastName" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="inputLastName" name="lastName" />
+          </div>
+          <div class="col-md-6">
+            <label for="inputEmail" class="form-label">Email</label>
+            <input type="email" class="form-control" id="inputEmail" name="userEmail" />
+          </div>
+          <div class="col-md-6">
+            <label for="inputPassword" class="form-label">Password</label>
+            <input type="password" class="form-control" id="inputPassword" name="userPassword" />
+          </div>
+          <div class="col-12">
+            <label for="inputAddress" class="form-label">Address</label>
+            <input type="text" class="form-control" id="inputAddress" placeholder="" name="userAddress" />
+          </div>
+          <div class="col-md-6">
+            <label for="inputCity" class="form-label">City</label>
+            <input type="text" class="form-control" id="inputCity" name="userCity" />
+          </div>
+          <div class="col-md-4">
+            <label for="inputRegion" class="form-label">Region</label>
+            <select id="inputRegion" class="form-select" name="userRegion">
+              <option selected>Choose...</option>
+              <option value="Kharkiv">Kharkiv</option>
+              <option value="Odesa">Odesa</option>
+              <option value="Dnipro">Dnipro</option>
+              <option value="Zaporizhzhia">Zaporizhzhia</option>
+              <option value="Mykolaiv">Mykolaiv</option>
+              <option value="Luhansk">Luhansk</option>
+              <option value="Vinnytsia">Vinnytsia</option>
+              <option value="Khmelnitskiy">Khmelnitskiy</option>
+              <option value="Chernihiv">Chernihiv</option>
+            </select>
+          </div>
+          <div class="col-md-2">
+            <label for="inputZip" class="form-label">Zip</label>
+            <input type="text" class="form-control" id="inputZip" name="userZip" />
+          </div>
+          <div class="col-12">
+            <button type="submit" class="btn btn-primary">Enter in out-10</button>
+          </div>
+        </form>
+
+        <div id="out-10" class="p-3 text-bg-light rounded-3"></div>
+      </section>
+    </div>
+  </body>
+</html>
